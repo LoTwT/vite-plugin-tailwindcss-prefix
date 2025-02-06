@@ -1,0 +1,71 @@
+{
+  "name": "vite-plugin-tailwindcss-prefix",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.4",
+  "description": "vite-plugin-tailwindcss-prefix",
+  "author": "LoTwT <l709937065@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LoTwT/vite-plugin-tailwindcss-prefix#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoTwT/vite-plugin-tailwindcss-prefix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LoTwT/vite-plugin-tailwindcss-prefix/issues"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm build",
+    "prettier": "prettier --write .",
+    "release": "bumpp && pnpm publish",
+    "typecheck": "tsc --noEmit",
+    "up": "taze latest -I -f",
+    "watch": "tsup --watch"
+  },
+  "devDependencies": {
+    "@ayingott/eslint-config": "^1.4.10",
+    "@ayingott/prettier-config": "^1.2.9",
+    "@types/node": "^22.13.1",
+    "bumpp": "^10.0.2",
+    "eslint": "^9.19.0",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2",
+    "simple-git-hooks": "^2.11.1",
+    "taze": "^18.4.0",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": "@ayingott/prettier-config"
+}
