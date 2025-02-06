@@ -10,7 +10,6 @@
       "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["vitest/globals"],
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
