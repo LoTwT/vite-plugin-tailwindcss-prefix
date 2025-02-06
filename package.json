@@ -14,7 +14,12 @@
   "bugs": {
     "url": "https://github.com/LoTwT/vite-plugin-tailwindcss-prefix/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "tailwindcss",
+    "prefix"
+  ],
   "sideEffects": false,
   "exports": {
     ".": "./dist/index.js",
